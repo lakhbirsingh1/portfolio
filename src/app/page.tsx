@@ -1,113 +1,110 @@
+'use client'
+import { useEffect, useState } from 'react';
 import Image from "next/image";
+import { EmblaOptionsType } from 'embla-carousel';
+import EmblaCarousel from "@/components/EmblaSlider/EmblaCarousel";
+import Link from "next/link";
+import CursorFollow from '@/components/CursorFollow';
+import { Behance, Dribbble, Github, Linkedin, CloudDownload, Telephone } from 'react-bootstrap-icons';
+
+
+
+const OPTIONS: EmblaOptionsType = { axis: 'y' };
+const SLIDE_COUNT = 4;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+// Array of objects containing image URLs and links
+const images = [
+  { icon: <Linkedin className='' size={18} />, link: 'https://www.linkedin.com/in/lakhbir-singh-643b5418b/' },
+  { icon: <Github className='' size={20} />, link: 'https://github.com/lakhbirsingh1' },
+  { icon: <Behance className='' size={20} />, link: 'https://www.behance.net/lakhbirsingh6' },
+  { icon: <Dribbble className='' size={18} />, link: 'https://dribbble.com/singh11w' },
+];
 
 export default function Home() {
+  const [title, setTitle] = useState('');
+  const titles = ['Web Designer', 'Web Developer', 'Motion Graphic'];
+  const [titleIndex, setTitleIndex] = useState(0);
+  const intervalDuration = 100;
+  const cursorBlinkDuration = 500;
+
+  useEffect(() => {
+    let charIndex = 0;
+    let typingIntervalId: NodeJS.Timeout;
+    let cursorIntervalId: NodeJS.Timeout;
+
+    const startTyping = () => {
+      if (charIndex <= titles[titleIndex].length) {
+        setTitle(titles[titleIndex].slice(0, charIndex) + '|');
+        charIndex++;
+      } else {
+        clearInterval(typingIntervalId);
+        setTimeout(() => {
+          cursorIntervalId = setInterval(() => {
+            setTitle((prevTitle) => (prevTitle.endsWith('|') ? prevTitle.slice(0, -1) : prevTitle + '|'));
+          }, cursorBlinkDuration);
+        }, cursorBlinkDuration);
+      }
+    };
+
+    typingIntervalId = setInterval(startTyping, intervalDuration);
+
+    return () => {
+      clearInterval(typingIntervalId);
+      clearInterval(cursorIntervalId);
+    };
+  }, [titleIndex]);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+    }, titles.length * intervalDuration * 2);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex p-5 min-h-screen flex-col items-center justify-between bg-no-repeat bg-cover bg-[url('/images/banner-bg.png')]">
+      <div className="absolute -z-1 right-0 top-0 w-1/2 h-1/2  bg-gradient-to-r from-gray-800/30 from-10% via-green-500/20 via-30% to-green-800/30 to-90% blur-xl rounded-full bg-blend-darken"></div>
+      <div className="absolute left-0 bottom-0 w-1/2 h-1/2  bg-gradient-to-r from-green-500/30 from-10% via-green-500/30 via-30% to-gray-800/30 to-90% blur-3xl rounded-full bg-blend-darken"></div>
+      <div className="container relative">
+        <div className="lg:flex pt-20 lg:pt-0">
+          <div className="rounded-3xl lg:h-auto h-96 w-full col-span-1 relative glitch transform rotate-y-6 overflow-hidden lg:max-w-lg flex-auto">
+            <div className="bg-[url('/images/dp.png')] glitch-item"></div>
+            <div className="bg-[url('/images/dp.png')] glitch-item"></div>
+            <div className="bg-[url('/images/dp.png')] glitch-item"></div>
+            <div className="bg-[url('/images/dp.png')] glitch-item"></div>
+            <div className="lg:absolute lg:bottom-0 lg:left-0 lg:right-0 bg-gradient-to-t from-gray-900 to-black-500">
+              <h2 className="w-full text-center text-4xl mb-2 font-extrabold">Lakhbir Singh</h2>
+              <h4 className="w-full text-center text-2xl mb-4 font-bold text-green-400">{title}</h4>
+              <div className="flex gap-4 items-center justify-center pb-5">
+                {images.map((image, index) => (
+                  <Link key={index} href={image.link}>
+                    {image.icon}
+                  </Link>
+                ))}
+              </div>
+              <div className="flex justify-between border-t border-slate-400">
+                <button className="w-1/2 p-3">
+                  <Link href="/documents/resume.pdf" download className="flex gap-3 uppercase font-semibold justify-center">
+                    Download CV
+                    <CloudDownload className='' size={20} />
+                  </Link>
+                </button>
+                <Link href="tel:+919466667767" className="w-1/2 border-l border-slate-400 p-3 flex gap-3 uppercase font-semibold justify-center">
+                  Contact Me
+                  <Telephone className='' size={20} />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex-1">
+            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <CursorFollow />
     </main>
   );
 }

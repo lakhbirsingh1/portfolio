@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fugaz_One, Play } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const ZenDots = Fugaz_One({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const PlayFont = Play({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${ZenDots.className} ${PlayFont.className}` }>
+        {children}
+      </body>
     </html>
   );
 }
