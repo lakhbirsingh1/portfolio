@@ -21,7 +21,7 @@ const CursorFollow = () => {
   }, []);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => { // Explicitly type the 'e' parameter as MouseEvent
       if (isDelayOver) {
         setCursorPosition((prevPosition) => {
           const distX = e.clientX - prevPosition.x;
