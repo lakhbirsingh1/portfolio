@@ -7,7 +7,7 @@ export default function SkillsAndLanguages() {
     return (
         <>
             <div className="border-b border-slate-700/50 p-6">
-                <h2 className="text-2xl">General Skills</h2>
+                <h2 className="text-2xl text-white">General Skills</h2>
             </div>
             <div className="grid grid-cols-2">
                 <div className="p-8">

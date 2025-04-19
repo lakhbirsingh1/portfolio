@@ -30,8 +30,8 @@ export default function RootLayout({
           {children}
         </div>
         <div className="Alert min-h-screen flex md:hidden justify-center items-center animated-bg">
-          <h1 className="text-5xl text-center font-bold px-4 flex justify-center items-center flex-col">
-            Please open in browser
+          <h1 className="text-4xl text-white text-center font-bold px-4 flex justify-center items-center flex-col">
+          💻✨ Bigger screen, better vibes <br /> visit us on a desktop browser! 😎🖥️
             <span className=" w-4 h-4 min-w-[14px] min-h-[14px] rounded-full bg-white animate-blink"></span>
           </h1>
         </div>

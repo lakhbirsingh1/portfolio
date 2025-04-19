@@ -50,7 +50,7 @@ export const Thumb: React.FC<PropType> = ({ selected, index, onClick }) => {
               selected ? 'text-green-500' : 'text-gray-500'
             }`}
           />
-          <h6 className={`mt-3 text-sm font-semibold ${selected ? 'text-white' : 'text-gray-500'}`}>
+          <h6 className={`mt-3 text-sm text-white font-semibold ${selected ? 'text-white' : 'text-gray-500'}`}>
             {content.text}
           </h6>
         </div>

@@ -28,7 +28,7 @@ export default function FunFacts() {
     return (
         <>
             <div className="border-b border-slate-700/50 p-6">
-                <h2 className="text-2xl">Fun Facts</h2>
+                <h2 className="text-2xl text-white">Fun Facts</h2>
             </div>
             <div className="grid grid-cols-4">
                 {funFactsData.map((fact, index) => (
@@ -38,7 +38,7 @@ export default function FunFacts() {
                         ) : (
                             fact.icon
                         )}
-                        <h6 className="mt-3 text-sm max-w-32">{fact.text}</h6>
+                        <h6 className="mt-3 text-sm text-white max-w-32">{fact.text}</h6>
                     </div>
                 ))}
             </div>

@@ -15,12 +15,12 @@ const Project = () => {
   return (
     <div className={styles.imageGallery}>
       <div className="border-b border-slate-700/50 p-6 flex justify-between">
-        <h2 className="text-2xl">Works</h2>
+        <h2 className="text-2xl text-white">Works</h2>
         <div className={`${styles.tabMenu} flex items-center`}>
-          <button className={`${activeTab === 'latest' ? `${styles.active} text-green-400` : ''} font-normal text-sm px-3`} onClick={() => handleTabChange('latest')}>Latest</button>
-          <button className={`${activeTab === 'design' ? `${styles.active} text-green-400` : ''}  font-normal text-sm px-3`} onClick={() => handleTabChange('design')}>Web & Mobile App Design</button>
-          <button className={`${activeTab === 'ae' ? `${styles.active} text-green-400` : ''}  font-normal text-sm px-3`} onClick={() => handleTabChange('ae')}>After Effects</button>
-          <button className={`${activeTab === 'blender' ? `${styles.active} text-green-400` : ''}  font-normal text-sm px-3`} onClick={() => handleTabChange('blender')}>Blender</button>
+          <button className={`${activeTab === 'latest' ? `${styles.active} text-green-400` : ''} font-normal text-sm text-white px-3`} onClick={() => handleTabChange('latest')}>Latest</button>
+          <button className={`${activeTab === 'design' ? `${styles.active} text-green-400` : ''}  font-normal text-sm text-white px-3`} onClick={() => handleTabChange('design')}>Web & Mobile App Design</button>
+          <button className={`${activeTab === 'ae' ? `${styles.active} text-green-400` : ''}  font-normal text-sm text-white px-3`} onClick={() => handleTabChange('ae')}>After Effects</button>
+          <button className={`${activeTab === 'blender' ? `${styles.active} text-green-400` : ''}  font-normal text-sm text-white px-3`} onClick={() => handleTabChange('blender')}>Blender</button>
         </div>
       </div>
 

@@ -71,7 +71,7 @@ export default function Home() {
             <div className="bg-[url('/images/dp.png')] glitch-item"></div>
 
             <div className="lg:absolute lg:bottom-0 lg:left-0 lg:right-0 bg-gradient-to-t from-gray-900 to-black-500 p-5 z-10">
-              <h2 className="text-center text-4xl font-extrabold">Lakhbir Singh</h2>
+              <h2 className="text-center text-4xl text-white font-extrabold">Lakhbir Singh</h2>
               <h4 className="text-center text-2xl font-bold text-green-400">{title}<span className="animate-dot inline-block w-3 h-3 bg-green-400 rounded-full ml-1"></span></h4>
               
               {/* Social Icons */}
@@ -85,11 +85,11 @@ export default function Home() {
 
               {/* Buttons */}
               <div className="flex justify-between border-t border-slate-400">
-                <Link href="/documents/resume.pdf" download className="w-1/2 p-3 flex gap-3 uppercase font-semibold justify-center hover:text-green-500 transition">
+                <Link href="/documents/resume.pdf" download className="w-1/2 p-3 flex gap-3 uppercase font-semibold justify-center hover:text-green-500 transition text-white">
                   Download CV
                   <CloudDownload size={20} />
                 </Link>
-                <Link href="tel:+919466667767" className="w-1/2 border-l border-slate-400 p-3 flex gap-3 uppercase font-semibold justify-center hover:text-green-500 transition">
+                <Link href="tel:+919466667767" className="w-1/2 border-l border-slate-400 p-3 flex gap-3 uppercase font-semibold justify-center hover:text-green-500 transition text-white">
                   Contact Me
                   <Telephone size={20} />
                 </Link>

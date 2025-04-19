@@ -66,7 +66,7 @@ export default function ToolStack() {
     return (
         <>
             <div className="border-b border-slate-700/50 p-6">
-                <h2 className="text-2xl">Tool Stack</h2>
+                <h2 className="text-2xl text-white">Tool Stack</h2>
             </div>
             <div className="grid grid-cols-4 gap-8 p-6">
                 {ToolStackData.map((tool, index) => (
@@ -80,13 +80,13 @@ export default function ToolStack() {
                                 svg: "w-24 h-24 drop-shadow-md",
                                 indicator: "stroke-green-600",
                                 track: "stroke-white/10",
-                                value: "text-sm text-white bottom-[-2.8rem]",
+                                value: "text-sm text-white text-white bottom-[-2.8rem]",
                             }}
                             strokeWidth={1.5}
                             showValueLabel={true}
                         />
                         </div>
-                        <h6 className="mt-3 text-sm">{tool.text}</h6>
+                        <h6 className="mt-3 text-sm text-white">{tool.text}</h6>
                 
                     </div>
                 ))}

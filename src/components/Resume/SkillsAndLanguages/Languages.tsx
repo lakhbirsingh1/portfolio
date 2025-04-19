@@ -86,7 +86,7 @@ export default function Languages() {
         <>
             {languages.map((language, index) => (
                 <div key={`language-${index}`} className="mb-4">
-                    <h2 className="text-2xl flex gap-2 mb-5">{language.title}</h2>
+                    <h2 className="text-2xl text-white flex gap-2 mb-5">{language.title}</h2>
                     <div className="flex items-center gap-5">
                         <div className="w-16 h-16 bg-gray-500/10 rounded-xl flex items-center justify-center border border-gray-600/30">
                             <Image src={language.icon} alt="" width={language.width} height={language.height} className="" />
@@ -94,8 +94,8 @@ export default function Languages() {
                         <div className="grow">
                             <div className="flex flex-col gap-2 w-full max-w-md">
                                 <div className="flex justify-between">
-                                    <h4 className="text-sm">{language.name}</h4>
-                                    <span className="text-sm">{language.percentage}%</span>
+                                    <h4 className="text-sm text-white">{language.name}</h4>
+                                    <span className="text-sm text-white">{language.percentage}%</span>
                                 </div>
                                 <div className="progress-bar flex gap-2">
                                     {language.bars.map((bar, barIndex) => (

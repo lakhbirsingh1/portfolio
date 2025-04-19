@@ -40,7 +40,7 @@ const Skills = () => {
     <>
       {sections.map((section, index) => (
         <div key={index} className="flex justify-between items-start p-6">
-          <span className="bg-green-500 text-sm px-2 rounded text-neutral-800">
+          <span className="bg-green-500 text-sm text-white px-2 rounded text-neutral-800">
             {section.title}:
           </span>
           <div className="flex gap-3 flex-wrap justify-end max-w-72">
@@ -64,14 +64,14 @@ const Skills = () => {
                         index === 0 ? "animate-bounce" : "bg-green-900/20"
                       }`}
                     />
-                    <span className="absolute w-max uppercase top-0 translate-y-0 text-sm bg-gray-800 px-2 py-1 rounded transition duration-150 ease-out opacity-0 pointer-events-none group-hover:opacity-100 group-hover:-translate-y-8 after:absolute after:content-[''] after:left-1/2 after:-bottom-0.5 after:w-1.5 after:h-1.5 after:bg-gray-800 after:-z-10 after:rotate-45 after:-translate-x-1/2 after:scale-0 group-hover:after:scale-100 after:transition-transform after:duration-150">
+                    <span className="absolute w-max uppercase top-0 translate-y-0 text-sm text-white bg-gray-800 px-2 py-1 rounded transition duration-150 ease-out opacity-0 pointer-events-none group-hover:opacity-100 group-hover:-translate-y-8 after:absolute after:content-[''] after:left-1/2 after:-bottom-0.5 after:w-1.5 after:h-1.5 after:bg-gray-800 after:-z-10 after:rotate-45 after:-translate-x-1/2 after:scale-0 group-hover:after:scale-100 after:transition-transform after:duration-150">
                       {skill.name.toLowerCase()}
                     </span>
                   </div>
                 ))}
               </div>
             ) : (
-              <h3 className="text-sm">
+              <h3 className="text-sm text-white">
                 {Array.isArray(section.content)
                   ? section.content.join(", ")
                   : section.content}

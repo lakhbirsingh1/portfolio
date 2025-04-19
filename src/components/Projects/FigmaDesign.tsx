@@ -61,9 +61,9 @@ export default function FigmaDesign() {
                                         <div className="overflow-hidden rounded-xl">
                                             {item.image && <Image src={item.image} alt="" width={100} height={100} className="w-full rounded-xl ease-in  duration-500 delay-150 group-hover:scale-110 grayscale group-hover:grayscale-0" />}
                                         </div>
-                                        <h6 className="text-base text-gray-400 mb-2 mt-5">{item.company}</h6>
-                                        <div className="text-base flex items-center justify-between">
-                                            <h3 className="text-lg group-hover:text-green-500 ease-in  duration-500">{item.description}</h3>
+                                        <h6 className="text-base text-white text-gray-400 mb-2 mt-5">{item.company}</h6>
+                                        <div className="text-base text-white flex items-center justify-between">
+                                            <h3 className="text-lg text-white group-hover:text-green-500 ease-in  duration-500">{item.description}</h3>
                                             <div className="rounded-full border border-gray-600 group-hover:border-green-500 min-w-10 w-10 h-10 flex items-center justify-center ease-in  duration-500">
                                                 <ArrowUpRight className='group-hover:text-green-500 text-gray-500 ease-in  duration-500' size={20} />
                                             </div>
@@ -85,9 +85,9 @@ export default function FigmaDesign() {
                                         <div className="overflow-hidden rounded-xl">
                                             {item.image && <Image src={item.image} alt="" width={100} height={100} className="w-full rounded-xl ease-in  duration-500 delay-150 group-hover:scale-110 grayscale group-hover:grayscale-0" />}
                                         </div>
-                                        <h6 className="text-base text-gray-400 mb-2 mt-5">{item.company}</h6>
-                                        <div className="text-base flex items-center justify-between">
-                                            <h3 className="text-lg group-hover:text-green-500 ease-in  duration-500">{item.description}</h3>
+                                        <h6 className="text-base text-white text-gray-400 mb-2 mt-5">{item.company}</h6>
+                                        <div className="text-base text-white flex items-center justify-between">
+                                            <h3 className="text-lg text-white group-hover:text-green-500 ease-in  duration-500">{item.description}</h3>
                                             <div className="rounded-full border border-gray-600 group-hover:border-green-500 min-w-10 w-10 h-10 flex items-center justify-center ease-in  duration-500">
                                                 <ArrowUpRight className='group-hover:text-green-500 text-gray-500 ease-in  duration-500' size={20} />
                                             </div>

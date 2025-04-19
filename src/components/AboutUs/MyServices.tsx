@@ -38,7 +38,7 @@ export default function MyServices() {
     return (
         <>
             <div className="border-b border-slate-700/50 p-6">
-                <h2 className="text-2xl">My Services</h2>
+                <h2 className="text-2xl text-white">My Services</h2>
             </div>
             <div className="grid grid-cols-2">
                 {services.map((service, index) => (
@@ -47,8 +47,8 @@ export default function MyServices() {
                             <div className="icon rounded-full bg-green-900/10 w-16 h-16 flex items-center justify-center mb-3">
                                 <Image src={service.icon} alt="" width={service.width} height={service.height} className=""/>
                             </div>
-                            <h3 className="font-semibold text-xl mb-3">{service.title}</h3>
-                            <p className="text-sm">{service.description}</p>
+                            <h3 className="font-semibold text-xl text-white mb-3">{service.title}</h3>
+                            <p className="text-sm text-white">{service.description}</p>
                             {index === services.length - 1 && ( // Conditionally render badge only for the last service
                               <span className="badge overflow-hidden absolute top-3 right-3 bg-green-500/10 border border-green-500 rounded-md text-xs px-2 py-1 text-green-500 before:content:[''] before:opacity-5 before:absolute before:bg-white before:w-full before:h-full before:top-0">{service.badge}</span>
                             )}

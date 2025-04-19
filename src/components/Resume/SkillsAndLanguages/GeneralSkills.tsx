@@ -48,7 +48,7 @@ export default function GeneralSkills() {
         <>
             {skills.map((skill, index) => (
                 <div key={`skill-${index}`} className="mb-4">
-                    <h2 className="text-2xl flex gap-2 mb-5">{skill.title}</h2>
+                    <h2 className="text-2xl text-white flex gap-2 mb-5">{skill.title}</h2>
                     <div className="flex gap-5">
                         <div className="w-16 h-16 bg-gray-500/10 rounded-xl flex items-center justify-center border border-gray-600/30">
                             <Image src={skill.icon} alt="" width={skill.width} height={skill.height} className="" />
@@ -61,8 +61,8 @@ export default function GeneralSkills() {
                                     base: "max-w-md",
                                     track: "drop-shadow-md bg-gray-700/90",
                                     indicator: "!bg-green-600",
-                                    label: "tracking-wider font-medium text-lg",
-                                    value: "text-white font-medium text-lg",
+                                    label: "tracking-wider font-medium text-lg text-white",
+                                    value: "text-white font-medium text-lg text-white",
                                 }}
                                 label={skill.name}
                                 value={skill.value}

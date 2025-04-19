@@ -48,13 +48,13 @@ export default function ContactUS() {
   return (
     <>
       <div className="border-b border-slate-700/50 p-6 flex justify-between">
-        <h2 className="text-2xl">Get In Touch</h2>
+        <h2 className="text-2xl text-white">Get In Touch</h2>
       </div>
       <div className="grid p-6">
         <div>
-          <h2 className={`${SyneFont.className} text-5xl font-black mb-3`}>Let’s work together</h2>
+          <h2 className={`${SyneFont.className} text-5xl text-white font-black mb-3`}>Let’s work together</h2>
           <div className="flex items-center gap-3 mb-8">
-            <p className="text-xl">Based in India | </p>
+            <p className="text-xl text-white">Based in India | </p>
             {images.map((image, index) => (
               <div key={index} className="icon">
                 <Link href={image.link} target="_blank" rel="noopener noreferrer">
@@ -67,8 +67,8 @@ export default function ContactUS() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {contactMethods.map((method, index) => (
             <div key={index} className="card relative border border-slate-700/50 px-4 py-6 bg-gray-800/10 rounded-3xl mb-5">
-              <h3 className="text-xl mb-5 font-bold max-w-64">{method.title}</h3>
-              <Link className="text-base flex items-center justify-between" href={method.link} target="_blank" rel="noopener noreferrer">
+              <h3 className="text-xl text-white mb-5 font-bold max-w-64">{method.title}</h3>
+              <Link className="text-base text-white flex items-center justify-between" href={method.link} target="_blank" rel="noopener noreferrer">
                 {method.content}
                 <div className="rounded-full border border-green-500 w-12 h-12 flex items-center justify-center">
                   {method.icon}
@@ -77,7 +77,7 @@ export default function ContactUS() {
             </div>
           ))}
         </div>
-        <h2 className={`${SyneFont.className} text-[85px] fugza font-black `}>LAKHBIR SINGH</h2>
+        <h2 className={`${SyneFont.className} text-[85px] text-white fugza font-black `}>LAKHBIR SINGH</h2>
       </div>
     </>
   );
