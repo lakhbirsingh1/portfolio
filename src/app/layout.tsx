@@ -26,7 +26,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ZenDots.className} ${PlayFont.className}` }>
-        {children}
+        <div className="hidden md:block">
+          {children}
+        </div>
+        <div className="Alert min-h-screen flex justify-center items-center animated-bg">
+        <h1 className="text-5xl text-center px-4 flex justify-center items-center flex-col">
+  Please open in browser
+  <span className=" w-4 h-4 min-w-[14px] min-h-[14px] rounded-full bg-white animate-blink"></span>
+</h1>
+
+
+
+        </div>
       </body>
     </html>
   );

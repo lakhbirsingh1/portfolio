@@ -6,7 +6,7 @@ export default function MyResume() {
             sectionTitle: "Experience",
             items: [
                 {
-                    tag: "2024",
+                    tag: "2025",
                     title: "Web Designer",
                     company: "Teq Mavens",
                     description: "I have lucky to a part of the team of the TeqMavens, Love to work here. And i have learn to many things here. Whether it is related to work or other things, we work like family members. ",

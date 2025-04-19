@@ -6,9 +6,8 @@ const Description = () => {
         <>
           
             <div className="p-5 py-8 border-r border-slate-700/50">
-                <p className="text-sm mb-4">Hey! there ✋ Lakhbir Singh. I’m a Indian-based web & Graphic Designer with a strong designing background and passion for visual and motion’s effect’s. I bring ideas to life and create a compelling and aesthetically pleasing story through design.</p>
-                <p className="text-sm">I consider myself a creative, open minded and 
-proactive person, who enjoys teamwork and who is always willing to face new challenges.</p>
+                <p className="text-sm mb-4">Hey there! 👋 I’m Lakhbir Singh, a Web & Graphic Designer based in India. With a deep passion for visual storytelling, I specialize in motion graphics, 3D design using Blender, and creating dynamic animations. I bring ideas to life through <b className="text-fuchsia-500">Smart Work with AI Tools</b> and cutting-edge technologies, crafting designs that are not only visually stunning but also engaging and impactful.</p>
+                <p className="text-sm">I’m a creative thinker with an open mind and a proactive approach to everything I do. I love working with teams and bringing new ideas to life, always ready to tackle fresh challenges that come my way. For me, every project is a chance to learn, grow, and do something amazing!</p>
             </div>
             
         </>

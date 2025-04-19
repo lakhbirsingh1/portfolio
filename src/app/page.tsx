@@ -19,7 +19,7 @@ const images = [
 ];
 
 export default function Home() {
-  const titles = ['Web Designer', 'Web Developer', 'Motion Graphic'];
+  const titles = ['UI/UX Designer', 'Smart with AI Tools', 'Frontend Developer', 'Animations', 'Motion Graphics', '3D Soon!'];
   const [title, setTitle] = useState('');
   const [titleIndex, setTitleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);

@@ -10,19 +10,19 @@ export default function MotionAndVisualGraphics() {
                     image: "/images/projects/3.jpg",
                     company: "App",
                     description: "Investment Mobile Application",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
                 {
                     image: "/images/projects/1.jpg",
                     company: "App",
                     description: "Investment Mobile Application",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
                 {
                     image: "/images/projects/1.jpg",
                     company: "App",
                     description: "Investment Mobile Application",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
             ]
         },
@@ -35,13 +35,13 @@ export default function MotionAndVisualGraphics() {
                     image: "/images/projects/1.jpg",
                     company: "App",
                     description: "Investment Mobile Application",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
                 {
                     image: "/images/projects/1.jpg",
                     company: "App",
                     description: "Investment Mobile Application",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
             ]
         },

@@ -10,19 +10,19 @@ export default function Latest() {
                     image: "/images/projects/certificate.jpg",
                     company: "Certificate",
                     description: "Achievment Certificate",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
                 {
                     image: "/images/projects/crm.png",
                     company: "Dashboard",
                     description: "CRM Admin Panel",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
                 {
                     image: "/images/projects/work-post.png",
                     company: "Post",
                     description: "Social Media Post",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
             ]
         },
@@ -35,7 +35,7 @@ export default function Latest() {
                     image: "/images/projects/real-estate.png",
                     company: "App",
                     description: "Real Estate Mobile Application",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
                 {
                     image: "/images/projects/shoe.png",

@@ -10,13 +10,13 @@ export default function WebDesign() {
                     image: "/images/projects/crm.png",
                     company: "Dashboard",
                     description: "CRM Admin Panel",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
                 {
                     image: "/images/projects/real-estate.png",
                     company: "App",
                     description: "Real Estate Mobile Application",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
             ]
         },
@@ -29,13 +29,13 @@ export default function WebDesign() {
                     image: "/images/projects/1.jpg",
                     company: "App",
                     description: "Investment Mobile Application",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
                 {
                     image: "/images/projects/1.jpg",
                     company: "App",
                     description: "Investment Mobile Application",
-                    url: "https://dribbble.com/shots/24156883-Real-Estate-App",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
             ]
         },
