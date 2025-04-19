@@ -61,7 +61,7 @@ export default function Home() {
       <div className="absolute -z-1 right-0 top-0 w-1/2 h-1/2 bg-gradient-to-r from-gray-800/30 from-10% via-green-500/20 via-30% to-green-800/30 to-90% blur-xl rounded-full"></div>
       <div className="absolute left-0 bottom-0 w-1/2 h-1/2 bg-gradient-to-r from-green-500/30 from-10% via-green-500/30 via-30% to-gray-800/30 to-90% blur-3xl rounded-full"></div>
       
-      <div className="container relative">
+      <div className="max-w-[1600px] relative">
         <div className="lg:flex pt-20 lg:pt-0">
           {/* Profile Section */}
           <div className="rounded-3xl lg:h-auto h-96 w-full relative glitch transform rotate-y-6 overflow-hidden lg:max-w-lg flex-auto before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-black/60 before:z-10">
