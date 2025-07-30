@@ -23,10 +23,10 @@ export default function ContactUS() {
       icon: <Behance className='text-green-500' size={20} />,
       link: 'https://www.behance.net/lakhbirsingh6'
     },
-    {
-      icon: <Dribbble className='text-green-500' size={18} />,
-      link: 'https://dribbble.com/singh11w'
-    },
+    // {
+    //   icon: <Dribbble className='text-green-500' size={18} />,
+    //   link: 'https://dribbble.com/singh11w'
+    // },
   ];
 
 

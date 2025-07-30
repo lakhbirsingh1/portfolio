@@ -15,7 +15,7 @@ const images = [
   { icon: <Linkedin size={18} className="text-green-400" />, link: 'https://www.linkedin.com/in/lakhbir-singh-643b5418b/' },
   { icon: <Github size={20} className="text-green-400" />, link: 'https://github.com/lakhbirsingh1' },
   { icon: <Behance size={20} className="text-green-400" />, link: 'https://www.behance.net/lakhbirsingh6' },
-  { icon: <Dribbble size={18} className="text-green-400" />, link: 'https://dribbble.com/singh11w' },
+  // { icon: <Dribbble size={18} className="text-green-400" />, link: 'https://dribbble.com/singh11w' },
 ];
 
 export default function Home() {

@@ -41,7 +41,7 @@ export default function Latest() {
                     image: "/images/projects/shoe.png",
                     company: "Post",
                     description: "Shoe Poster",
-                    url: "https://dribbble.com/shots/24195193-Social-Media-Post-Shoe-Post",
+                    url: "https://www.behance.net/lakhbirsingh6",
                 },
             ]
         },

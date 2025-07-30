@@ -21,8 +21,8 @@ export default function GeneralSkills() {
             value: 90
         },
         {
-            name: "Bootstrap",
-            icon: "/images/bootstrap.png",
+            name: "Javascript",
+            icon: "/images/js.png",
             width: 32,
             height: 32,
             value: 85
